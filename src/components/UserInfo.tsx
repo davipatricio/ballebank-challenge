@@ -18,7 +18,7 @@ export default function UserInfoCard() {
         <p>Número do Cartão</p>
         <input
           type="text"
-          className="w-full h-10 p-3 rounded-md mt-3 font-mono"
+          className="w-full h-10 p-3 rounded-md mt-3 font-mono bg-gray-red"
           placeholder="0000 0000 0000 0000"
           pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
           value={formatCardNumber(cardData.number)}
@@ -37,7 +37,7 @@ export default function UserInfoCard() {
         <p>Nome do Titular</p>
         <input
           type="text"
-          className="w-full h-10 p-3 rounded-md mt-3 font-medium"
+          className="w-full h-10 p-3 rounded-md mt-3 font-medium bg-gray-red"
           placeholder="Leonardo di Ser Piero da Vinci"
           value={cardData.name}
           minLength={5}
@@ -51,7 +51,7 @@ export default function UserInfoCard() {
         <label>
           <p>Validade</p>
           <input
-            className="w-full h-10 p-3 rounded-md mt-3 font-mono"
+            className="w-full h-10 p-3 rounded-md mt-3 font-mono bg-gray-red"
             placeholder="MM/AA"
             type="text"
             pattern="[0-9]{2}/[0-9]{2}"
@@ -73,7 +73,7 @@ export default function UserInfoCard() {
         <label>
           <p>CVV</p>
           <input
-            className="w-full h-10 p-3 rounded-md mt-3 font-mono"
+            className="w-full h-10 p-3 rounded-md mt-3 font-mono bg-gray-red"
             placeholder="123"
             type="text"
             minLength={3}

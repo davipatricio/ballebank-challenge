@@ -4,6 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
+				'gray-red': '#342F30',
 				'warm-gray': '#251F20',
 				salmon: '#E68E7B',
 				'salmon-gradient': 'linear-gradient(143deg, #E68E7B 0%, #E68E7B 50%, #D47A66 100%)',

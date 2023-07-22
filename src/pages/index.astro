@@ -6,13 +6,20 @@ import UserInfo from "../components/UserInfo";
 
 import FrontCreditCard from "../components/CreditCard/FrontCreditCard";
 import BackCreditCard from "../components/CreditCard/BackCreditCard";
+import GitHubButton from "../components/GitHubButton.astro";
 ---
 
 <Layout>
   <main class="flex flex-col gap-12">
-    <header>
-      <h1 class="font-extrabold text-4xl">Ballebank</h1>
-      <p class="text-zinc-500 text-xl">Guarde seus cartões de forma segura.</p>
+    <header class="flex justify-between items-center">
+      <div>
+        <h1 class="font-extrabold text-4xl">Ballebank</h1>
+        <p class="text-zinc-500 text-xl">
+          Guarde seus cartões de forma segura.
+        </p>
+      </div>
+
+      <GitHubButton />
     </header>
 
     <form
