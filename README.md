@@ -1,47 +1,31 @@
-# Astro Starter Kit: Minimal
+# 💳 Ballebank
 
-```
-npm create astro@latest -- --template minimal
-```
+O objetivo deste desafio é criar uma interface que permita aos usuários cadastrar as informações dos seus cartões de forma interativa.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+Este projeto foi inspirado em um desafio mensal da [comunidade Ballerini](https://discord.gg/ballerini).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+O design deste website foi inspirado neste projeto do Figma: [Ballebank](https://www.figma.com/community/file/1264325884186428690).
 
-## 🚀 Project Structure
+## 📚 Tecnologias usadas
 
-Inside of your Astro project, you'll see the following folders and files:
+- [Astro](https://astro.build/)
+- [React](https://react.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 📸 Demonstração
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+<details>
+  <summary>Expandir</summary>
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+  ![Desktop](https://cdn.discordapp.com/attachments/1129069826141323284/1132340803293945907/image.png)
+  ![Mobile](https://media.discordapp.net/attachments/1129069826141323284/1132340958638387200/image.png?width%253D329%2526height%253D701)
+</details>
 
-Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+## 🚀 Instalação
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. Clone o repositório usando `git clone https://github.com/davipatricio/ballebank-challenge.git`
+2. Instale as dependências usando `yarn install` ou `npm install`
+3. Inicie o servidor de desenvolvimento usando `yarn dev` ou `npm run dev`
+4. Acesse `http://localhost:3000` no seu navegador
