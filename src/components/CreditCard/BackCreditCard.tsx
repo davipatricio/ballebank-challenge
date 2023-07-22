@@ -1,3 +1,5 @@
+import DiscordLogo from '../../assets/discord-logo.png';
+
 import { useStore } from "@nanostores/react";
 import { $cardData } from "../../stores/cardData";
 
@@ -15,7 +17,7 @@ export default function BackCreditCard() {
         </div>
 
         <div className="mt-auto ml-auto sm:mb-6">
-          <img src="discord-logo.png" draggable="false" alt="Discord logo" className="w-7" />
+          <img src={DiscordLogo} draggable="false" alt="Discord logo" className="w-7" />
         </div>
       </div>
     </div>
