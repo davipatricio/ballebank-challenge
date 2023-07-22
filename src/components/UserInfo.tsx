@@ -22,7 +22,11 @@ export default function UserInfoCard() {
           placeholder="0000 0000 0000 0000"
           pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
           value={formatCardNumber(cardData.number)}
-          onChange={handleChange("number")}
+          onChange={(e) => {
+            const value = e.target.value.replace(/\D/g, "");
+            e.target.value = formatCardNumber(value);
+            handleChange("number")(e);
+          }}
           minLength={19}
           maxLength={19}
           required
@@ -36,6 +40,8 @@ export default function UserInfoCard() {
           className="w-full h-10 p-3 rounded-md mt-3 font-medium"
           placeholder="Leonardo di Ser Piero da Vinci"
           value={cardData.name}
+          minLength={5}
+          maxLength={60}
           onChange={handleChange("name")}
           required
         />
@@ -49,8 +55,17 @@ export default function UserInfoCard() {
             placeholder="MM/AA"
             type="text"
             pattern="[0-9]{2}/[0-9]{2}"
+            minLength={5}
+            maxLength={5}
             value={cardData.expiration}
-            onChange={handleChange("expiration")}
+            onChange={(e) => {
+              const value = e.target.value.replace(/\D/g, "");
+              e.target.value = value
+                .replace(/(\d{2})(\d)/, "$1/$2")
+                .replace(/(\/\d{2})\d+?$/, "$1");
+
+              handleChange("expiration")(e);
+            }}
             required
           />
         </label>
@@ -65,7 +80,10 @@ export default function UserInfoCard() {
             maxLength={4}
             pattern="[0-9]{3,4}"
             value={cardData.cvv}
-            onChange={handleChange("cvv")}
+            onChange={(e) => {
+              e.target.value = e.target.value.replace(/\D/g, "");
+              handleChange("cvv")(e);
+            }}
             data-item="cvv"
             required
           />

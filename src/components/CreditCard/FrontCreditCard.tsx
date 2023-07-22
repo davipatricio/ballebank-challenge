@@ -19,7 +19,7 @@ export default function FrontCreditCard() {
           <h2 className="sm:text-2xl font-bold">
             {cardData.number || "0000 0000 0000 0000"}
           </h2>
-          <p className="text-base font-medium">
+          <p className="text-base font-medium break-words">
             {cardData.name || "Leonardo di Ser Piero da Vinci"}
           </p>
 
