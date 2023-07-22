@@ -13,7 +13,7 @@ export default function UserInfoCard() {
       });
 
   return (
-    <div className="flex flex-col gap-10 p-8 font-semibold text-gray-400">
+    <div className="flex flex-col gap-5 font-semibold text-gray-400 sm:gap-10 sm:p-8">
       <label>
         <p>Número do Cartão</p>
         <input
@@ -41,7 +41,7 @@ export default function UserInfoCard() {
         />
       </label>
 
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-2 gap-3 sm:gap-10">
         <label>
           <p>Validade</p>
           <input
