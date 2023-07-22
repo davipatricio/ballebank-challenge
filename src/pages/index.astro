@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import UserInfoCard from "../components/UserInfoCard";
+import FlippableCard from "../components/FlippableCard";
+---
+
+<Layout>
+  <main class="flex flex-col gap-12">
+    <header>
+      <h1 class="font-extrabold text-4xl">Ballebank</h1>
+      <p class="text-zinc-500 text-xl">Guarde seus cartões de forma segura.</p>
+    </header>
+
+    <form
+      class="grid grid-cols-[475px,564px] grid-rows-1 gap-x-10 gap-y-12 max-w-[1124px]"
+    >
+      <UserInfoCard client:load />
+      <FlippableCard client:load />
+
+      <button
+        type="submit"
+        class="col-span-2 w-52 h-10 bg-salmon font-semibold rounded-md mx-auto text-sm hover:bg-salmon/90 hover:text-gray-300 transition-colors"
+      >
+        Cadastrar cartão</button
+      >
+    </form>
+  </main>
+</Layout>
