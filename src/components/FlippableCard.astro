@@ -1,0 +1,48 @@
+---
+---
+
+<div class="flip-card bg-transparent">
+  <div class="inner relative w-full h-full">
+    <div class="card front absolute h-full w-full">
+      <slot name="front-card" />
+    </div>
+
+    <div class="card back absolute h-full w-full">
+      <slot name="back-card" />
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .flip-card {
+    perspective: 1000px;
+
+    > .inner {
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+
+      > .card {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        &.back {
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
+</style>
+
+<script>
+  const cvvInput = document.querySelector('[data-item="cvv"]') as HTMLInputElement;
+  
+  cvvInput.addEventListener('focus', () =>{
+    const innerCard = document.querySelector('.flip-card > .inner') as HTMLElement;
+    innerCard.style.transform = 'rotateY(180deg)';
+  });
+
+  cvvInput.addEventListener('blur', () =>{
+    const innerCard = document.querySelector('.flip-card > .inner') as HTMLElement;
+    innerCard.style.transform = 'rotateY(0deg)';
+  });
+</script>

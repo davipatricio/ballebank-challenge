@@ -1,5 +1,6 @@
 import { $cardData, CardData } from "../stores/cardData";
 import { useStore } from "@nanostores/react";
+import formatCardNumber from "../utils/formatCardNumber";
 
 export default function UserInfoCard() {
   const cardData = useStore($cardData);
@@ -19,9 +20,11 @@ export default function UserInfoCard() {
           type="text"
           className="w-full h-10 p-3 rounded-md mt-3 font-mono"
           placeholder="0000 0000 0000 0000"
-          pattern="[0-9]{4} ?[0-9]{4} ?[0-9]{4} ?[0-9]{4}"
-          value={cardData.number}
+          pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
+          value={formatCardNumber(cardData.number)}
           onChange={handleChange("number")}
+          minLength={19}
+          maxLength={19}
           required
         />
       </label>
@@ -63,6 +66,7 @@ export default function UserInfoCard() {
             pattern="[0-9]{3,4}"
             value={cardData.cvv}
             onChange={handleChange("cvv")}
+            data-item="cvv"
             required
           />
         </label>
